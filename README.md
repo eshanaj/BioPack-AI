@@ -1,4 +1,4 @@
-# BioPack AI – Intelligent Packaging Decision Support
+# BioPack AI – Evidence-Grounded Food Packaging Intelligence
 
 > **Make Better Packaging Decisions with Food Science.**
 
