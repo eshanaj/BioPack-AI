@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    /* Centralized Theme Tokens - Light Mode (Crisp Pure White) */
+    --bg-background: #ffffff;
+    --bg-surface: #ffffff;
+    --bg-elevated: #ffffff;
+    --bg-card: #ffffff;
+    --bg-hover: #f8fafc;
+
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --text-inverse: #ffffff;
+
+    --border-subtle: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --border-hover: #94a3b8;
+
+    --color-primary: #047857;
+    --color-primary-hover: #065f46;
+    --color-primary-fg: #ffffff;
+    --color-primary-subtle: #f1f5f9;
+
+    --color-secondary: #0284c7;
+    --color-secondary-subtle: #f0f9ff;
+    --color-accent: #059669;
+
+    --color-success: #16a34a;
+    --color-success-subtle: #f8fafc;
+    --color-success-border: #cbd5e1;
+    --color-success-text: #166534;
+
+    --color-warning: #d97706;
+    --color-warning-subtle: #fffbeb;
+    --color-warning-border: #fde68a;
+    --color-warning-text: #92400e;
+
+    --color-error: #dc2626;
+    --color-error-subtle: #fef2f2;
+    --color-error-border: #fecaca;
+    --color-error-text: #991b1b;
+
+    --color-info: #2563eb;
+    --color-info-subtle: #eff6ff;
+    --color-info-border: #bfdbfe;
+    --color-info-text: #1e40af;
+
+    --input-bg: #ffffff;
+    --input-border: #cbd5e1;
+    --input-text: #0f172a;
+    --input-placeholder: #94a3b8;
+    --input-focus: #059669;
+    --focus-ring: 0 0 0 2px #ffffff, 0 0 0 4px rgba(5, 150, 105, 0.35);
+
+    --chart-bg: #ffffff;
+    --chart-grid: #e2e8f0;
+    --chart-axis: #64748b;
+    --chart-tooltip-bg: #0f172a;
+    --chart-tooltip-text: #ffffff;
+    --chart-1: #059669;
+    --chart-2: #0284c7;
+    --chart-3: #d97706;
+    --chart-4: #7c3aed;
+    --chart-5: #e11d48;
+
+    --graph-node-bg: #ffffff;
+    --graph-node-border: #cbd5e1;
+    --graph-edge: #94a3b8;
+    --graph-text: #0f172a;
+
+    --scrollbar-track: #f1f5f9;
+    --scrollbar-thumb: #cbd5e1;
+    --scrollbar-thumb-hover: #94a3b8;
+  }
+
+  html.dark {
+    /* Centralized Theme Tokens - Dark Mode (Greenish Bio-Tech Theme) */
+    --bg-background: #061d15;
+    --bg-surface: #09271d;
+    --bg-elevated: #0d382a;
+    --bg-card: #09271d;
+    --bg-hover: #0c3527;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #d1fae5;
+    --text-muted: #6ee7b7;
+    --text-inverse: #061d15;
+
+    --border-subtle: #134937;
+    --border-strong: #1d5f48;
+    --border-hover: #2a7a5e;
+
+    --color-primary: #10b981;
+    --color-primary-hover: #059669;
+    --color-primary-fg: #022c22;
+    --color-primary-subtle: #0d3b2b;
+
+    --color-secondary: #38bdf8;
+    --color-secondary-subtle: #082f49;
+    --color-accent: #34d399;
+
+    --color-success: #4ade80;
+    --color-success-subtle: #052e16;
+    --color-success-border: #14532d;
+    --color-success-text: #86efac;
+
+    --color-warning: #fbbf24;
+    --color-warning-subtle: #2b260d;
+    --color-warning-border: #78350f;
+    --color-warning-text: #fde68a;
+
+    --color-error: #f87171;
+    --color-error-subtle: #301212;
+    --color-error-border: #7f1d1d;
+    --color-error-text: #fca5a5;
+
+    --color-info: #60a5fa;
+    --color-info-subtle: #082845;
+    --color-info-border: #1e3a8a;
+    --color-info-text: #93c5fd;
+
+    --input-bg: #08281e;
+    --input-border: #17523e;
+    --input-text: #ffffff;
+    --input-placeholder: #528373;
+    --input-focus: #34d399;
+    --focus-ring: 0 0 0 2px #061d15, 0 0 0 4px rgba(52, 211, 153, 0.4);
+
+    --chart-bg: #09271d;
+    --chart-grid: #134937;
+    --chart-axis: #6ee7b7;
+    --chart-tooltip-bg: #0d382a;
+    --chart-tooltip-text: #f8fafc;
+    --chart-1: #34d399;
+    --chart-2: #38bdf8;
+    --chart-3: #fbbf24;
+    --chart-4: #a78bfa;
+    --chart-5: #fb7185;
+
+    --graph-node-bg: #09271d;
+    --graph-node-border: #1d5f48;
+    --graph-edge: #34d399;
+    --graph-text: #f8fafc;
+
+    --scrollbar-track: #09261c;
+    --scrollbar-thumb: #154736;
+    --scrollbar-thumb-hover: #1d5f48;
+  }
+
+  html {
+    background-color: var(--bg-background) !important;
+    color: var(--text-primary);
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-background) !important;
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

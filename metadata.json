@@ -1,0 +1,6 @@
+{
+  "name": "BioPack AI",
+  "description": "Evidence-Grounded Food Packaging Intelligence. Analyze food requirements, screen barrier materials with deterministic rules and TOPSIS ranking, audit existing packaging, and generate validation plans.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
